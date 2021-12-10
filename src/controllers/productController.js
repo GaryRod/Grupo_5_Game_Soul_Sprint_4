@@ -1,3 +1,5 @@
+const juegosDB = require("../data/products.json");
+
 const productController = {
     index: (req, res) => {
         res.render('./products/index', {title: "Home", listaJuegos: juegos})
