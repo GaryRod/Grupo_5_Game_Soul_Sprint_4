@@ -14,6 +14,10 @@ app.use('/', productsRoutes)
 
 app.use('/', userRoutes)
 
+app.use((req,res,next)=>{
+    res.status(404).render(path.resolve(__dirname,'views/products/not-found'))
+})
+
 
 app.listen(process.env.PORT || 3000, () => { 
     console.log("Servidor funcionando")
