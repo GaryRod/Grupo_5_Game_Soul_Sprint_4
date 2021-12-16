@@ -14,13 +14,14 @@ const productController = {
         res.render('./products/productCart', {title: "Carrito"})
     },
     productDetail: (req, res) => {
-        let juegoUnico = juegosDB.find(juego => juego.id == req.params.juegoId)
+        let juegoUnico = juegosDB.find(juego => juego.id == req.params.id)
 
         res.render('./products/productDetail', {title: "Detalles", juego: juegoUnico})
     },
     editProduct: (req, res) => {
         res.render('./products/editProduct', {title: "Editar producto"})
     }
+
 }
 
 module.exports = productController
