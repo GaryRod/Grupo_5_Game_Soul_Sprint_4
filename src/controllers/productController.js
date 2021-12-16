@@ -14,7 +14,7 @@ const productController = {
         res.render('./products/productCart', {title: "Carrito"})
     },
     productDetail: (req, res) => {
-        let juegoUnico = juegos.find(juego => juego.id == req.params.id)
+        let juegoUnico = juegosDB.find(juego => juego.id == req.params.id)
 
         res.render('./products/productDetail', {title: "Detalles", juego: juegoUnico})
     },
