@@ -44,7 +44,6 @@ const productController = {
 			img: productToUpdate.img,
 			categoria : req.body.categoria
         }
-
 		productModel.update(objetoAct)
 		res.redirect('/')
 			
