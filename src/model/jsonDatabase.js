@@ -95,18 +95,13 @@ const modelController = function (name) {
         inSale: function () {
             let rows = this.readFile();
             //console.log(" --- filtro los que están para venta")
-  
+
             const enVenta = rows.filter(i => i.category == 'in-sale')
             //console.log(" --- ESTOY EN VENTA--------------------")
             //console.log(enVenta)
             return enVenta
 
         }
-
-       
-
-
-
     }
 }
 

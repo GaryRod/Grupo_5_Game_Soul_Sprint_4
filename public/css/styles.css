@@ -796,7 +796,8 @@ select {
 }
 
 .cont-img__img{
-    width: 70%;
+    width: 90%;
+    height: 200px;
 }
 
 .cont-ediciones-plataformas, .cont-plataformas{
@@ -1179,8 +1180,8 @@ select {
     }
 
     .cont-img__img{
-        /* height: 250px;
-        width: 250px; */
+        height: 210px;
+        width: 210px;
     }
 
     /*-----------Footer---------------*/
@@ -1314,6 +1315,11 @@ select {
     .cont-img__juego{
         border: none;
         width: 90%;
+    }
+
+    .cont-img__img{
+        height: 250px;
+        width: 250px;
     }
 
     .detalles{

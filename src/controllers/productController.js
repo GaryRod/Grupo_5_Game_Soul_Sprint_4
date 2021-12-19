@@ -1,26 +1,21 @@
-const juegosDB = require("../data/products.json");
+const jsonDB = require('../model/jsonDatabase');
+const productModel = jsonDB('products');
 
 const productController = {
-    index: (req, res) => {
-        res.render('./products/index', {title: "Home", listaJuegos: juegosDB})
-    },
     products: (req, res) => {
-        res.render('./products/products', {title: "Productos", listaJuegos: juegosDB})
-    },
-    createProduct: (req, res) => {
-        res.render('./products/createProduct', {title: "Crear Producto" })
-    },
-    productCart: (req, res) => {
-        res.render('./products/productCart', {title: "Carrito"})
+		let producto = productModel.all();
+        res.render('./products/products', {producto})
     },
     productDetail: (req, res) => {
-        let juegoUnico = juegosDB.find(juego => juego.id == req.params.id)
-
-        res.render('./products/productDetail', {title: "Detalles", juego: juegoUnico})
+		let producto = productModel.find(req.params.id)
+		res.render('./products/productDetail', {producto})
     },
-    editProduct: (req, res) => {
-        res.render('./products/editProduct', {title: "Editar producto"})
-    },
+	productCart: (req,res) => {
+		res.render('./products/productCart')
+	},
+	createProduct: (req, res) => {
+		res.render('./products/createProduct',)
+	},
     store: (req, res) => {
 		let nuevoJuego = {
 			nombre : req.body.nombre,
@@ -32,6 +27,10 @@ const productController = {
 		}
 		productModel.create(nuevoJuego)
 		res.redirect('/')
+	},
+	editProduct: (req, res) => {
+		let productToEdit = productModel.find(req.params.id)
+		res.render('./products/editProduct', {productToEdit})
 	},
     update: (req, res) => {
 		let productToUpdate = productModel.find(req.params.id)
@@ -50,11 +49,8 @@ const productController = {
 	},
     destroy : (req, res) => {
 		productModel.delete(req.params.id)
-		
-		res.redirect('/')
-		
+		res.redirect('/')	
 	}
-
 }
 
 module.exports = productController

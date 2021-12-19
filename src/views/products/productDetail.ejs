@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <%- include ('../partials/head') %> 
+    <%- include ('../partials/head', {title: "detalle"}) %> 
 
 </head>
 <body class="body">
@@ -11,11 +11,11 @@
     <main class="main main-detail">
         <section class="juego">
             <div class="nombre__juego">
-                <span><%= juego.nombre %></span>
+                <span><%= producto.nombre %></span>
             </div>
 
             <div class="cont-img__juego">
-                <img src="../images/juegos/<%= juego.img %>" alt="COD-Black-Ops-4" class="cont-img__img">
+                <img src="/images/juegos/<%= producto.img %>" alt="COD-Black-Ops-4" class="cont-img__img">
             </div>
 
             <div class="cont-ediciones-plataformas">
@@ -44,7 +44,7 @@
 
         <section class="detalles">
             <div class="detalles__primer-fila">
-                <div class="precio">$ <%= juego.precio %></div>
+                <div class="precio">$ <%= producto.precio %></div>
 
                 <div class="cont__añadir" >
                     <button type="submit" class="añadir__carrito-fav">Añadir al carrito</button>
@@ -68,11 +68,13 @@
 
                 <div class="cont__detalles">
                     <p>
-                        <%= juego.descripcion %>
+                        <%= producto.descripcion %>
                     </p>
                 </div>
             </div>
         </section>
+        <a href="./<%= producto.id %>/edit">editar</a>
+        <a href=""></a>
     </main>
 
     <%- include ('../partials/footer') %>
