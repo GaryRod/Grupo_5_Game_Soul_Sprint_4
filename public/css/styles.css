@@ -991,6 +991,18 @@ select {
     margin: 10px;
 }
 
+/*-----------Error 404---------------*/
+
+.main--error-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p--error-404 {
+    text-align: center;
+}
+
 /*-----------Footer---------------*/
 .footer{
     align-self: flex-end;
@@ -1182,6 +1194,12 @@ select {
     .cont-img__img{
         height: 210px;
         width: 210px;
+    }
+
+    /*-----------Error 404---------------*/
+
+    .img--error-404 {
+        margin-top: 10%;
     }
 
     /*-----------Footer---------------*/

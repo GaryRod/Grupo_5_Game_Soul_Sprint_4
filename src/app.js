@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require('path')
+const methodOverride = require('method-override');
 
 const mainRoutes = require('./routes/mainRoutes')
 const productsRoutes = require('./routes/productsRoutes')
@@ -24,6 +25,11 @@ app.use(express.json())
 app.use('/', mainRoutes)
 app.use('/', productsRoutes)
 app.use('/users', userRoutes)
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
+
+app.use(methodOverride('__method'));
 
 // Error 404
 app.use((req,res,next)=>{
