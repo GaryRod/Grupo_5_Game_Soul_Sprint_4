@@ -14,15 +14,17 @@ const productController = {
 		res.render('./products/productCart')
 	},
 	createProduct: (req, res) => {
-		res.render('./products/createProduct',)
+		res.render('./products/createProduct')
 	},
     store: (req, res) => {
+		let grupo = req.body
+		grupo.imagen = req.file.filename
 		let nuevoJuego = {
 			nombre : req.body.nombre,
 			descripcion : req.body.descripcion,
 			precio : req.body.precio,
 			edicion : req.body.edicion,      
-			img: req.body.img,
+			img: grupo.imagen,
 			genero: req.body.genero,
 			categoria : req.body.categoria
 		}
@@ -35,13 +37,15 @@ const productController = {
 	},
     update: (req, res) => {
 		let productToUpdate = productModel.find(req.params.id)
+		let grupo = req.body
+		grupo.imagen = req.file.filename
 		let objetoAct ={
 			id : productToUpdate.id,
 			nombre : req.body.nombre,
 			descripcion : req.body.descripcion,
 			precio : req.body.precio,
 			edicion : req.body.edicion,      
-			img: productToUpdate.img,
+			img: grupo.imagen,
 			genero: req.body.genero,
 			categoria : req.body.categoria
         }

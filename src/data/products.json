@@ -133,5 +133,14 @@
   "genero": "Acción",
   "precio": "10.000",
   "alt": "gow-4"
+ },
+ {
+  "id": 11,
+  "nombre": "SpiderMan",
+  "descripcion": "descripcion de spirderman",
+  "precio": "1010",
+  "edicion": "coleccionista",
+  "img": "imagen-1640009441178.png",
+  "genero": "fps"
  }
 ]

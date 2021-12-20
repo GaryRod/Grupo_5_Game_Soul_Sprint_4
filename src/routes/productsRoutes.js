@@ -15,10 +15,10 @@ router.get('/products/:id', productController.productDetail);
 router.get('/productCart', productController.productCart);
 
 router.get('/create', productController.createProduct);
-router.post('/create', upload.single("imagenDelProductoCreado"), productController.store);
+router.post('/create', upload.single("imagen"), productController.store);
 
 router.get('/products/edit/:id', productController.editProduct);
-router.put("/products/edit/:id", upload.single("imagenDelProductoCreado"), productController.update);
+router.put("/products/edit/:id", upload.single("imagen"), productController.update);
 
 router.delete('/products/delete/:id', productController.destroy)
 
