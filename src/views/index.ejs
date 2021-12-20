@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include ('../partials/head') %> 
+<%- include ('./partials/head', {title: "Home"}) %> 
 <body class="body">
     
-    <%- include('../partials/header')  %> 
+    <%- include('./partials/header')  %> 
 
     <main class="main main--index">
         <section class="section-ppal">
@@ -54,7 +54,7 @@
             <div class="section-sec__cont-arts">
 
                 <% listaJuegos.forEach(element => { %>
-
+                    <a href="products/<%= element.id %>" class="section-sec__titulo-enlace">
                     <article class="section-sec__arts">
 
                         <div class="section-sec__cont-picture-star">
@@ -67,20 +67,20 @@
                         </div>
 
                         <div class="section-sec__cont-datos">
-                            <span class="section-sec__spans"><a href="products/<%= element.id %>" class="section-sec__titulo-enlace"><%= element.nombre %></a></span>
+                            <span class="section-sec__spans"><%= element.nombre %></span>
                             <span class="section-sec__spans">$ <%= element.precio %></span>
                             <span class="button-carrito">Añadir al carrito</span>
                         </div>
 
                         
                     </article>
-
+                </a>
                 <% }) %>
 
             </div>
         </section>
     </main>
 
-    <%- include ('../partials/footer') %> 
+    <%- include ('./partials/footer') %> 
 </body>
 </html>

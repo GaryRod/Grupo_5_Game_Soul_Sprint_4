@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include ('../partials/head') %> 
+    <%- include ('../partials/head', {title: "Productos"}) %> 
 <body class="body">
     <%- include('../partials/header')  %> 
 
@@ -9,11 +9,12 @@
             <h3 class="section-sec__titulo">Todos nuestros productos</h3>
             <div class="section-sec__cont-arts">
 
+                <% producto.forEach(element => { %>
                     <article class="section-sec__arts">
 
                         <div class="section-sec__cont-picture-star">
                             <picture class="section-sec__picture">
-                                <img src="../images/juegos/cyberpunk-2077-250px.jpg" alt="cyberpunk-2077" class="section-sec__imgs">
+                                <img src="../images/juegos/<%= element.img %>" alt="cyberpunk-2077" class="section-sec__imgs">
                             </picture>
                             <div class="section-sec__cont-star">
                                 <i class="fas fa-star section-sec__star"></i>
@@ -21,187 +22,17 @@
                         </div>
 
                         <div class="section-sec__cont-datos">
-                            <span class="section-sec__spans"><a href="/productDetail/1" class="section-sec__titulo-enlace">Cyberpunk 2077</a></span>
-                            <span class="section-sec__spans">$ 10.000</span>
+                            <span class="section-sec__spans"><a href="/productDetail/<%= element.id %>" class="section-sec__titulo-enlace"><%= element.nombre %></a></span>
+                            <span class="section-sec__spans">$ <%= element.precio %></span>
                             <span class="button-carrito">Añadir al carrito</span>
                         </div>
 
                         
                     </article>
-
-                    <article class="section-sec__arts">
-
-                        <div class="section-sec__cont-picture-star">
-                            <picture class="section-sec__picture">
-                                <img src="../images/juegos/fifa-22-250px.jpg" alt="fifa-22" class="section-sec__imgs">
-                            </picture>
-                            <div class="section-sec__cont-star">
-                                <i class="fas fa-star section-sec__star"></i>
-                            </div>
-                        </div>
-
-                        <div class="section-sec__cont-datos">
-                            <span class="section-sec__spans"><a href="/productDetail/2" class="section-sec__titulo-enlace">Fifa 22</a></span>
-                            <span class="section-sec__spans">$ 11.000</span>
-                            <span class="button-carrito">Añadir al carrito</span>
-                        </div>
-
-                        
-                    </article>
-
-
-                    <article class="section-sec__arts">
-
-                        <div class="section-sec__cont-picture-star">
-                            <picture class="section-sec__picture">
-                                <img src="../images/juegos/forza-horizon-5-250px.jpg" alt="forza-horizon-5" class="section-sec__imgs">
-                            </picture>
-                            <div class="section-sec__cont-star">
-                                <i class="fas fa-star section-sec__star"></i>
-                            </div>
-                        </div>
-
-                        <div class="section-sec__cont-datos">
-                            <span class="section-sec__spans"><a href="/productDetail/3" class="section-sec__titulo-enlace">Forza Horizon 5</a></span>
-                            <span class="section-sec__spans">$ 11.000</span>
-                            <span class="button-carrito">Añadir al carrito</span>
-                        </div>
-
-                        
-                    </article>
-
-                    <article class="section-sec__arts">
-
-                        <div class="section-sec__cont-picture-star">
-                            <picture class="section-sec__picture">
-                                <img src="../images/juegos/battlefield.jpg" alt="battlefield-4" class="section-sec__imgs">
-                            </picture>
-                            <div class="section-sec__cont-star">
-                                <i class="fas fa-star section-sec__star"></i>
-                            </div>
-                        </div>
-
-                        <div class="section-sec__cont-datos">
-                            <span class="section-sec__spans"><a href="/productDetail/4" class="section-sec__titulo-enlace">Battlefield 4</a></span>
-                            <span class="section-sec__spans">$ 12.500</span>
-                            <span class="button-carrito">Añadir al carrito</span>
-                        </div>
-
-                        
-                    </article>
-
-                    <article class="section-sec__arts">
-
-                        <div class="section-sec__cont-picture-star">
-                            <picture class="section-sec__picture">
-                                <img src="../images/juegos/age-of-empires-4-150px.jpg" alt="age-of-empires-4" class="section-sec__imgs">
-                            </picture>
-                            <div class="section-sec__cont-star">
-                                <i class="fas fa-star section-sec__star"></i>
-                            </div>
-                        </div>
-
-                        <div class="section-sec__cont-datos">
-                            <span class="section-sec__spans"><a href="/productDetail/5" class="section-sec__titulo-enlace">AOE 4</a></span>
-                            <span class="section-sec__spans">$ 10.000</span>
-                            <span class="button-carrito">Añadir al carrito</span>
-                        </div>
-
-                        
-                    </article>
-
-                    
+                <% }) %>        
             </div>
         </section>
     </main>
-
-
-    <section class="section-sec">
-        <div class="section-sec__cont-arts">
-
-                <article class="section-sec__arts">
-
-                    <div class="section-sec__cont-picture-star">
-                        <picture class="section-sec__picture">
-                            <img src="../images/juegos/yakuza-kiwami-250px.jpg" alt="yakuza-kiwami" class="section-sec__imgs">
-                        </picture>
-                        <div class="section-sec__cont-star">
-                            <i class="fas fa-star section-sec__star"></i>
-                        </div>
-                    </div>
-
-                    <div class="section-sec__cont-datos">
-                        <span class="section-sec__spans"><a href="/productDetail/6" class="section-sec__titulo-enlace">Yakuza Kiwami</a></span>
-                        <span class="section-sec__spans">$ 9.500</span>
-                        <span class="button-carrito">Añadir al carrito</span>
-                    </div>
-
-                    
-                </article>
-
-                <article class="section-sec__arts">
-
-                    <div class="section-sec__cont-picture-star">
-                        <picture class="section-sec__picture">
-                            <img src="../images/juegos/inscryption-250px.jpg" alt="inscryption" class="section-sec__imgs">
-                        </picture>
-                        <div class="section-sec__cont-star">
-                            <i class="fas fa-star section-sec__star"></i>
-                        </div>
-                    </div>
-
-                    <div class="section-sec__cont-datos">
-                        <span class="section-sec__spans"><a href="/productDetail/7" class="section-sec__titulo-enlace">Inscryption</a></span>
-                        <span class="section-sec__spans">$ 12.500</span>
-                        <span class="button-carrito">Añadir al carrito</span>
-                    </div>
-
-                    
-                </article>
-
-
-                <article class="section-sec__arts">
-
-                    <div class="section-sec__cont-picture-star">
-                        <picture class="section-sec__picture">
-                            <img src="../images/juegos/ACValhalla-250px.jpg" alt="ac-valhalla" class="section-sec__imgs">
-                        </picture>
-                        <div class="section-sec__cont-star">
-                            <i class="fas fa-star section-sec__star"></i>
-                        </div>
-                    </div>
-
-                    <div class="section-sec__cont-datos">
-                        <span class="section-sec__spans"><a href="/productDetail/8" class="section-sec__titulo-enlace">Assassin's Creed Valhalla</a></span>
-                        <span class="section-sec__spans">$ 11.500</span>
-                        <span class="button-carrito">Añadir al carrito</span>
-                    </div>
-
-                    
-                </article>
-
-                <article class="section-sec__arts">
-
-                    <div class="section-sec__cont-picture-star">
-                        <picture class="section-sec__picture">
-                            <img src="../images/juegos/God_of_War-150px.jpg" alt="gow-4" class="section-sec__imgs">
-                        </picture>
-                        <div class="section-sec__cont-star">
-                            <i class="fas fa-star section-sec__star"></i>
-                        </div>
-                    </div>
-
-                    <div class="section-sec__cont-datos">
-                        <span class="section-sec__spans"><a href="/productDetail/9" class="section-sec__titulo-enlace">God of War 4</a></span>
-                        <span class="section-sec__spans">$ 10.000</span>
-                        <span class="button-carrito">Añadir al carrito</span>
-                    </div>
-
-                    
-                </article>
-
-        </div>
-    </section>
 
     <%- include ('../partials/footer') %> 
 </body>

@@ -4,9 +4,9 @@ const path = require('path');
 
 
 const modelController = function (name) {
-    console.log('entre al modelo')
-    console.log(name)
-    console.log(path.resolve(__dirname, '../data/', `${name}.json`))
+    // console.log('entre al modelo')
+    // console.log(name)
+    // console.log(path.resolve(__dirname, '../data/', `${name}.json`))
     return {
         tablePath: path.resolve(__dirname, '../data/', `${name}.json`),
 
@@ -95,18 +95,13 @@ const modelController = function (name) {
         inSale: function () {
             let rows = this.readFile();
             //console.log(" --- filtro los que están para venta")
-  
+
             const enVenta = rows.filter(i => i.category == 'in-sale')
             //console.log(" --- ESTOY EN VENTA--------------------")
             //console.log(enVenta)
             return enVenta
 
         }
-
-       
-
-
-
     }
 }
 
