@@ -23,6 +23,7 @@ const productController = {
 			precio : req.body.precio,
 			edicion : req.body.edicion,      
 			img: req.body.img,
+			genero: req.body.genero,
 			categoria : req.body.categoria
 		}
 		productModel.create(nuevoJuego)
@@ -41,6 +42,7 @@ const productController = {
 			precio : req.body.precio,
 			edicion : req.body.edicion,      
 			img: productToUpdate.img,
+			genero: req.body.genero,
 			categoria : req.body.categoria
         }
 		productModel.update(objetoAct)

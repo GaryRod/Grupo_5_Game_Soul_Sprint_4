@@ -4,9 +4,9 @@ const path = require('path');
 
 
 const modelController = function (name) {
-    console.log('entre al modelo')
-    console.log(name)
-    console.log(path.resolve(__dirname, '../data/', `${name}.json`))
+    // console.log('entre al modelo')
+    // console.log(name)
+    // console.log(path.resolve(__dirname, '../data/', `${name}.json`))
     return {
         tablePath: path.resolve(__dirname, '../data/', `${name}.json`),
 

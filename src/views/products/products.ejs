@@ -9,12 +9,12 @@
             <h3 class="section-sec__titulo">Todos nuestros productos</h3>
             <div class="section-sec__cont-arts">
 
-                <% array.forEach(element => { %>
+                <% producto.forEach(element => { %>
                     <article class="section-sec__arts">
 
                         <div class="section-sec__cont-picture-star">
                             <picture class="section-sec__picture">
-                                <img src="../images/juegos/cyberpunk-2077-250px.jpg" alt="cyberpunk-2077" class="section-sec__imgs">
+                                <img src="../images/juegos/<%= element.img %>" alt="cyberpunk-2077" class="section-sec__imgs">
                             </picture>
                             <div class="section-sec__cont-star">
                                 <i class="fas fa-star section-sec__star"></i>
@@ -22,8 +22,8 @@
                         </div>
 
                         <div class="section-sec__cont-datos">
-                            <span class="section-sec__spans"><a href="/productDetail/1" class="section-sec__titulo-enlace">Cyberpunk 2077</a></span>
-                            <span class="section-sec__spans">$ 10.000</span>
+                            <span class="section-sec__spans"><a href="/productDetail/<%= element.id %>" class="section-sec__titulo-enlace"><%= element.nombre %></a></span>
+                            <span class="section-sec__spans">$ <%= element.precio %></span>
                             <span class="button-carrito">Añadir al carrito</span>
                         </div>
 
