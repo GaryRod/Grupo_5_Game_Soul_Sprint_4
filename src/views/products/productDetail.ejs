@@ -72,11 +72,14 @@
                     </p>
                 </div>
             </div>
+
+            <div class="cont__edicion">
+                <a href="./edit/<%= producto.id %>" class="añadir__carrito-fav cont__edicion-editar">Editar Producto</a>
+                <form action="./delete/<%= producto.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="action-button delete añadir__carrito-fav">Eliminar</button>
+                </form>
+            </div>
         </section>
-        <a href="./edit/<%= producto.id %>">EDITAR PRODUCTO</a>
-        <form action="./delete/<%= producto.id %>?_method=DELETE" method="POST">
-            <button type="submit" class="action-button delete">ELIMINAR</button>
-        </form>
     </main>
 
     <%- include ('../partials/footer') %>

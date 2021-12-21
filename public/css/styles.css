@@ -987,6 +987,16 @@ select {
     /* overflow: scroll; */
 }
 
+.cont__edicion {
+    display: flex;
+    gap: 25px;
+    margin: 0 0 5% 0;
+}
+
+.cont__edicion-editar {
+    text-decoration: none;
+}
+
 .stock{
     margin: 10px;
 }
