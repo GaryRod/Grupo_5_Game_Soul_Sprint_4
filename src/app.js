@@ -22,7 +22,7 @@ app.use(express.json())
 
 // Rutas
 app.use('/', mainRoutes)
-app.use('/', productsRoutes)
+app.use('/products', productsRoutes)
 app.use('/users', userRoutes)
 
 app.use(express.urlencoded({ extended: false }));

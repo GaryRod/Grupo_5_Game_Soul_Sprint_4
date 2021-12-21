@@ -55,26 +55,26 @@
 
                 <% listaJuegos.forEach(element => { %>
                     <a href="products/<%= element.id %>" class="section-sec__titulo-enlace">
-                    <article class="section-sec__arts">
+                        <article class="section-sec__arts">
 
-                        <div class="section-sec__cont-picture-star">
-                            <picture class="section-sec__picture">
-                                <img src="../images/juegos/<%= element.img %>" alt="<% element.alt %>" class="section-sec__imgs">
-                            </picture>
-                            <div class="section-sec__cont-star">
-                                <i class="fas fa-star section-sec__star"></i>
+                            <div class="section-sec__cont-picture-star">
+                                <picture class="section-sec__picture">
+                                    <img src="../images/juegos/<%= element.img %>" alt="<% element.alt %>" class="section-sec__imgs">
+                                </picture>
+                                <div class="section-sec__cont-star">
+                                    <i class="fas fa-star section-sec__star"></i>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="section-sec__cont-datos">
-                            <span class="section-sec__spans"><%= element.nombre %></span>
-                            <span class="section-sec__spans">$ <%= element.precio %></span>
-                            <span class="button-carrito">Añadir al carrito</span>
-                        </div>
+                            <div class="section-sec__cont-datos">
+                                <span class="section-sec__spans"><%= element.nombre %></span>
+                                <span class="section-sec__spans">$ <%= element.precio %></span>
+                                <span class="button-carrito">Añadir al carrito</span>
+                            </div>
 
-                        
-                    </article>
-                </a>
+                            
+                        </article>
+                    </a>
                 <% }) %>
 
             </div>

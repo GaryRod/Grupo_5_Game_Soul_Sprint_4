@@ -8,18 +8,18 @@ const upload = require("../middlewares/multerMiddleware");
 // router.get('/', productController.index);
 
 /* Con readDetail - LEE PRODUCTO SEGUN ID */
-router.get('/products', productController.products)
+router.get('/', productController.products)
 
-router.get('/products/:id', productController.productDetail);
+router.get('/detail/:id', productController.productDetail);
 
 router.get('/productCart', productController.productCart);
 
 router.get('/create', productController.createProduct);
 router.post('/create', upload.single("imagen"), productController.store);
 
-router.get('/products/edit/:id', productController.editProduct);
-router.put("/products/edit/:id", upload.single("imagen"), productController.update);
+router.get('/:id/edit', productController.editProduct);
+router.put('/:id/edit', upload.single("imagen"), productController.update);
 
-router.delete('/products/delete/:id', productController.destroy)
+router.delete('/delete/:id', productController.destroy)
 
 module.exports = router
