@@ -7,6 +7,41 @@
     <main class="main main--index">
         <section class="section-sec">
             <h3 class="section-sec__titulo">Todos nuestros productos</h3>
+            <aside class="section-sec__filtro">
+                <div>
+                    <h4>Filtrar por...</h4>
+                </div>
+                <div class="section-sec__filtro-h5">
+                    <h5>Género:</h5>
+                </div>
+                
+                <div class="section-sec__filtro-div">
+                    <span><label>Acción</label><input type="radio" class="section-sec__filtro-input"></span>
+                    <span><label>Aventura</label><input type="radio" class="section-sec__filtro-input"></span>
+                    <span><label>Estrategia</label><input type="radio" class="section-sec__filtro-input"></span>
+                </div>
+                
+                <div class="section-sec__filtro-h5">
+                    <h5>Precio:</h5>
+                </div>
+
+                <div class="section-sec__filtro-div">
+                    <label>Desde:</label>
+                    <input type="number" value="10000" class="section-sec__filtro-number">
+                    <label>Hasta:</label>
+                    <input type="number" class="section-sec__filtro-number">
+                </div>
+
+                <div class="section-sec__filtro-h5">
+                    <h5>Edición:</h5>
+                </div>
+
+                <div class="section-sec__filtro-div">
+                    <span><label>Estándar</label><input type="radio" class="section-sec__filtro-input"></span>
+                    <span><label>Deluxe</label><input type="radio" class="section-sec__filtro-input"></span>
+                    <span><label>Gold</label><input type="radio" class="section-sec__filtro-input"></span>
+                </div>
+            </aside>
             <div class="section-sec__cont-arts">
 
                 <% producto.forEach(element => { %>
