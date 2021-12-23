@@ -292,6 +292,31 @@
     margin: 10px 0;
 }
 
+.section-sec__filtro {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 3%;
+    max-width: 250px;
+    margin: 2% auto;
+}
+
+.section-sec__filtro-div {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5% 0 0.5% 0;
+}
+
+.section-sec__filtro-number {
+    width: 50%;
+}
+
+.section-sec__filtro-input {
+    margin: 1%;
+}
+
 .section-sec__cont-arts{
     display: flex;
     gap: 15px;
@@ -1159,6 +1184,7 @@ select {
         left: -7px;
     }
 
+
     /*-----------Inicio de carrito---------------*/
     .carrito__juegos{
         padding: 20px;
@@ -1410,5 +1436,12 @@ select {
 
     .boton-enviar-producto {
         margin: 5% 0 5% 40%;
+    }
+
+    /* Filtro en Productos */
+
+    .section-sec__filtro {
+        margin: 1% auto;
+        max-width: 350px;
     }
 }
