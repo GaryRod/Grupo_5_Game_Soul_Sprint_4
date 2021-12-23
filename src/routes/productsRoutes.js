@@ -22,4 +22,6 @@ router.put('/:id/edit', upload.single("imagen"), productController.update);
 
 router.delete('/delete/:id', productController.destroy)
 
+router.get('/search', productController.search);
+
 module.exports = router

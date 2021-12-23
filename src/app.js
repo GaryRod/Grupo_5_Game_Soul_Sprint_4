@@ -31,11 +31,11 @@ app.use(express.json())
 app.use(methodOverride('__method'));
 
 // Error 404
-app.use((req,res,next)=>{
+app.use((req, res, next)=>{
     res.status(404).render(path.resolve(__dirname,'views/products/not-found'))
 })
 
-const port = 3000
+const port = 3030
 
 app.listen(process.env.PORT || port, () => { 
     console.log(`Servidor funcionando ${port}`)

@@ -100,8 +100,12 @@ const modelController = function (name) {
             //console.log(" --- ESTOY EN VENTA--------------------")
             //console.log(enVenta)
             return enVenta
-
-        }
+        },
+        // search: function (search) {
+        //     let todos = this.all()
+        //     let productsToSearch = todos.filter(product => product.name.toLowerCase().includes(search));
+        //     return productsToSearch
+        // }
     }
 }
 

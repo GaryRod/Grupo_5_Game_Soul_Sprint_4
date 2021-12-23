@@ -25,9 +25,9 @@
                     </div>
 
                     <div class="cont__consolas">
-                        <div class="ps5"><img class="img-logo__plataformas" src="../images/iconos/PlayStation_5_Logo.svg"></div>
-                        <div class="xbox"><img class="img-logo__plataformas" src="../images/iconos/Xbox_Logo.svg"></div>
-                        <div class="pc"><img class="img-logo__plataformas" src="../images/iconos/Windows_Logo.svg"></div>
+                        <div class="ps5"><img class="img-logo__plataformas" src="/images/iconos/PlayStation_5_Logo.svg"></div>
+                        <div class="xbox"><img class="img-logo__plataformas" src="/images/iconos/Xbox_Logo.svg"></div>
+                        <div class="pc"><img class="img-logo__plataformas" src="/images/iconos/Windows_Logo.svg"></div>
                     </div>
                 </di>
 
@@ -48,7 +48,10 @@
 
                 <div class="cont__añadir" >
                     <button type="submit" class="añadir__carrito-fav">Añadir al carrito</button>
-                    <button type="submit" class="añadir__carrito-fav">Añadir a favoritos</button>
+                    <div class="detail-cont-star">
+                        <i class="fas fa-star detail-star"></i>
+                        <p>Añadir a favoritos</p>
+                    </div>
                 </div>
 
                 <div class="stock">
@@ -74,8 +77,8 @@
             </div>
 
             <div class="cont__edicion">
-                <a href="./edit/<%= producto.id %>" class="añadir__carrito-fav cont__edicion-editar">Editar Producto</a>
-                <form action="./delete/<%= producto.id %>?_method=DELETE" method="POST">
+                <a href="/products/<%= producto.id %>/edit" class="añadir__carrito-fav cont__edicion-editar">Editar Producto</a>
+                <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="action-button delete añadir__carrito-fav">Eliminar</button>
                 </form>
             </div>

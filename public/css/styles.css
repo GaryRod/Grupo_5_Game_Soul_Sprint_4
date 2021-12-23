@@ -929,6 +929,7 @@ select {
 .cont__añadir{
     width: 100%;
     display: flex;
+    align-items: center;
     gap: 30px
 }
 
@@ -950,6 +951,20 @@ select {
 .añadir__carrito-fav:active{
     transform: translate(2px, 2px);
     box-shadow: 0px 0px;
+}
+
+.detail-cont-star{
+    display: flex;
+    gap: 10px;
+    cursor: pointer
+}
+
+.detail-star{
+    color: #fff;
+}
+
+.detail-cont-star:active .detail-star{
+    color: yellow;
 }
 
 .cont-datos{

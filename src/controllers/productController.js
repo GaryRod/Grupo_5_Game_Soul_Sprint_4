@@ -1,6 +1,10 @@
 const jsonDB = require('../model/jsonDatabase');
 const productModel = jsonDB('products');
 
+const products = require('../data/products')
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 const productController = {
     products: (req, res) => {
 		let producto = productModel.all();
@@ -53,10 +57,25 @@ const productController = {
 		res.redirect('/')
 			
 	},
-    destroy : (req, res) => {
+    destroy: (req, res) => {
 		productModel.delete(req.params.id)
 		res.redirect('/')	
-	}
+	},
+	// search: (req, res) => {
+	// 	let search = req.query.keywords;
+	// 	let buscados = productModel.search(search)
+	// 	res.render('./products/results', {buscados, search, toThousand})
+	// }
+	search: (req, res) => {
+		let search = req.query.keywords;
+		
+		let productsToSearch = products.filter(product => product.name );	
+		res.render('./products/results', { 
+			products: productsToSearch, 
+			search,
+			toThousand,
+		});
+	},
 }
 
 module.exports = productController
