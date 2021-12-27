@@ -1456,7 +1456,9 @@ select {
     /* Filtro en Productos */
 
     .section-sec__filtro {
+        max-width: 100%;
         margin: 1% auto;
-        max-width: 350px;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
