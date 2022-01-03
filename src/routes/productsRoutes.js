@@ -4,9 +4,6 @@ const router = express.Router();
 const productController = require('../controllers/productController');
 const upload = require("../middlewares/multerMiddleware");
 
-/* Con readAll - LISTADO DE PRODUCTOS, RENDERIZA CATALOGO DE PRODUCTOS*/
-// router.get('/', productController.index);
-
 /* Con readDetail - LEE PRODUCTO SEGUN ID */
 router.get('/', productController.products)
 
@@ -22,6 +19,6 @@ router.put('/:id/edit', upload.single("imagen"), productController.update);
 
 router.delete('/delete/:id', productController.destroy)
 
-router.get('/search', productController.search);
+// router.get('/search', productController.search);
 
 module.exports = router

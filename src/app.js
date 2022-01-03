@@ -25,11 +25,6 @@ app.use('/', mainRoutes)
 app.use('/products', productsRoutes)
 app.use('/users', userRoutes)
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json())
-
-app.use(methodOverride('__method'));
-
 // Error 404
 app.use((req, res, next)=>{
     res.status(404).render(path.resolve(__dirname,'views/products/not-found'))

@@ -80,32 +80,11 @@ const modelController = function (name) {
 
             this.writeFile(updatedRows);
         },
-
-        visited: function () {
-            let rows = this.readFile();
-            //console.log(" --- filtro los visitados")
-            
-            const visitados = rows.filter(i => i.category == 'visited')
-            //console.log(" --- ESTOY ----------------------")
-            //console.log(visitados)
-            return visitados 
-
-        },
-
-        inSale: function () {
-            let rows = this.readFile();
-            //console.log(" --- filtro los que están para venta")
-
-            const enVenta = rows.filter(i => i.category == 'in-sale')
-            //console.log(" --- ESTOY EN VENTA--------------------")
-            //console.log(enVenta)
-            return enVenta
-        },
-        // search: function (search) {
-        //     let todos = this.all()
-        //     let productsToSearch = todos.filter(product => product.name.toLowerCase().includes(search));
-        //     return productsToSearch
-        // }
+        buscado: function (filtro) {
+            let products = this.all()
+            let filtrado = products.filter(i => i.categoria === filtro)
+            return filtrado
+        }
     }
 }
 

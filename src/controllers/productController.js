@@ -61,21 +61,6 @@ const productController = {
 		productModel.delete(req.params.id)
 		res.redirect('/')	
 	},
-	// search: (req, res) => {
-	// 	let search = req.query.keywords;
-	// 	let buscados = productModel.search(search)
-	// 	res.render('./products/results', {buscados, search, toThousand})
-	// }
-	search: (req, res) => {
-		let search = req.query.keywords;
-		
-		let productsToSearch = products.filter(product => product.name );	
-		res.render('./products/results', { 
-			products: productsToSearch, 
-			search,
-			toThousand,
-		});
-	},
 }
 
 module.exports = productController
