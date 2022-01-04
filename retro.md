@@ -9,3 +9,7 @@ Como viene siendo costumbre, usaremos la dinámica de la estrella de mar para po
 3. Continuar haciendo: Repartir mejor las tareas, ya que ha quedado muy disparejo
 4. Hacer menos: 
 5. Dejar de hacer: Que no quede ningún compañero sin realizar una tarea, todos tienen que hacer al menos una parte
+
+# Tablero de trabajo actualizado:
+
+https://trello.com/b/atlpFJBU/the-pushers
