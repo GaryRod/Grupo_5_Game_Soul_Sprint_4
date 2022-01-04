@@ -364,12 +364,6 @@
 }
 
 .section-sec__picture{
-    text-align: center;
-    min-width: 100%;
-    height: 100%;
-}
-
-.section-sec__picture{
     border-radius: 5px;
     width: 150px;
     height: 150px;
@@ -1229,6 +1223,15 @@ select {
     .footer__li-met-pago{
         width: 40px;
     }
+
+    /* Filtro en Productos */
+
+    .section-sec__filtro {
+        max-width: 100%;
+        margin: 1% auto;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
 
 @media (min-width: 769px) {
@@ -1462,14 +1465,5 @@ select {
 
     .boton-enviar-producto {
         margin: 5% 0 5% 40%;
-    }
-
-    /* Filtro en Productos */
-
-    .section-sec__filtro {
-        max-width: 100%;
-        margin: 1% auto;
-        flex-direction: row;
-        justify-content: space-evenly;
     }
 }
